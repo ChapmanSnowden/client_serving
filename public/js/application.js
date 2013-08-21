@@ -16,13 +16,17 @@ $(document).ready(function() {
     };
 
     var setSkill = function(skill) {
-      $('#skill_holder').text(skill);
+      $('#skill_holder').html(skill);
     };
 
     setSkill(getSkill());
 
   });
 
-
+  $('.meal_teller').on('click', function(e) {
+    e.preventDefault();
+    var random_meal = meals[Math.floor(Math.random()*meals.length)];
+    $('#meal_holder').html(random_meal);
+  });
 
 });
