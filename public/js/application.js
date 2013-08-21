@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  $('.awesomeness_teller').on('click', function() {
+
+  $('.awesomeness_teller').on('click', function(e) {
+
+    var awesomeness = $(e.target).attr('data-heading');
+    $('#awesomeness_holder').html(awesomeness);
 
   });
 
-  // What other events do you need to bind to make the other pages work?
+
+
 });
